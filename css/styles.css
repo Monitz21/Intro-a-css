@@ -1,14 +1,22 @@
 * {
     box-sizing: border-box;
 }
+
 body {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* heredada por los hijos*/
+line-height: 1.6; /*Heredado por los hijos*/    
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
 }
+h1{ 
+    color: white; /*sobreescribe el color heredado*/
+p {
+    margin-bottom: 1em;
+    }
 
+}
 header {
     background-color: #4682b4;
     color: white;
@@ -32,6 +40,8 @@ header {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
+    color: inherit; /* Herencia del color */
+            font-family: inherit; /* Herencia de la fuente */
 }
 
 .method:hover {
