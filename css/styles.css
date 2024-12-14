@@ -28,14 +28,16 @@ h1 {
     text-align: center;
 
 }
-nav{
+
+nav {
     background-color: #90ee90;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -43,25 +45,147 @@ nav ul{
     gap: 20px;
 
 }
-nav ul li{
+
+nav ul li {
     display: inline;
 }
-nav ul li a{
+
+nav ul li a {
     color: rgb(119, 29, 29);
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
     transition: 0.3s;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #9982a5;
 }
-nav ul li:hover ul{
+
+nav ul li:hover ul {
     display: block;
 }
-nav ul li ul li a{
+
+nav ul li ul li a {
     padding: 5px 15px;
 }
+
+@media (max-width: 768px) {
+
+    body {
+
+        font-size: 14px;
+        /* Reducir tamaño de fuente en pantallas pequeñas */
+
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .method {
+        padding: 10px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+
+    body {
+        font-size: 18px;
+        /* Tamaño de fuente un poco mayor, adaptado a pantallas medianas */
+
+    }
+
+    .navbar {
+        flex-direction: row;
+        /* Volvemos la navegación a horizontal */
+        justify-content: space-around;
+
+    }
+
+    .sidebar {
+        display: block;
+        /* Mostramos la barra lateral, pero la mantenemos accesoria */
+
+        width: 30%;
+    }
+
+    .main-content {
+
+        width: 70%;
+        /* Ajustamos el ancho del contenido principal */
+
+    }
+
+    @media (min-width: 1024px) {
+
+        body {
+      
+          font-size: 20px; /* Fuente más grande para legibilidad en pantallas grandes */
+      
+        }
+      
+        .container {
+      
+          display: flex;
+      
+          flex-direction: row; /* Mantenemos un layout amplio y cómodo */
+      
+          flex-wrap: nowrap; /* Evitamos que los elementos se envuelvan */
+      
+        }
+      
+        .sidebar {
+      
+          width: 25%; /* Ajustamos la barra lateral para ocupar un espacio menor */
+      
+        }
+      
+        .main-content {
+      
+          width: 75%; /* El contenido principal tiene la mayor prioridad */
+      
+        }
+      
+      }
+}
+
+.navbar {
+
+    flex-direction: column;
+    /* Organiza la navegación verticalmente */
+
+    align-items: center;
+
+}
+
+.sidebar {
+
+    display: none;
+    /* Oculta la barra lateral en móviles para evitar el desorden */
+
+}
+
+
 
 #important-note {
     font-weight: bold;
@@ -69,6 +193,7 @@ nav ul li ul li a{
     color: #0b627e;
     font-size: 120%;
 }
+
 
 footer {
     box-sizing: border-box;
@@ -106,11 +231,13 @@ header {
     /*Espaciado entre los elementos*/
     padding: 10px;
     border: 2px #9982a5;
-    height: 1500px; /*altura del contenedor para alinear verticalmente*/
+    height: 1500px;
+    /*altura del contenedor para alinear verticalmente*/
     align-items: flex-end;
 }
-.item{
-    flex: 200px; 
+
+.item {
+    flex: 200px;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
@@ -120,6 +247,7 @@ header {
 
 
 }
+
 .method {
     display: inline-block;
     width: 30%;
