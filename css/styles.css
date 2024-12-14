@@ -8,27 +8,20 @@
 /* Cuerpo Principal */
 body {
     font-family: Arial, sans-serif;
+    /* Fuente heredada por los hijos */
     line-height: 1.6;
+    /* Espaciado de línea heredado por los hijos */
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
 }
 
 /* Titulares */
-h1, h2, h3 {
+h1 {
     color: white;
-    text-align: center;
+    /* Sobrescribe el color heredado */
 }
 
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-/* Párrafos */
 p {
     margin-bottom: 1em;
 }
@@ -36,13 +29,15 @@ p {
 /* Resaltado Específico */
 .highlight {
     color: rgb(213, 45, 73);
+    /* Más específico que body */
     text-align: center;
 }
 
 #important-note {
     font-weight: bold;
+    /* Más específico que .highlight */
     color: #0b627e;
-    font-size: 1.2em;
+    font-size: 120%;
 }
 
 /* Navegación */
@@ -56,12 +51,15 @@ nav {
 
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 20px;
 }
 
 nav ul li {
     position: relative;
+    display: inline-block;
 }
 
 nav ul li a {
@@ -83,7 +81,10 @@ nav ul li ul {
     top: 100%;
     left: 0;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li:hover ul {
@@ -95,9 +96,10 @@ nav ul li ul li a {
     white-space: nowrap;
 }
 
-/* Sidebar */
+/* Barra Lateral */
 .sidebar {
     display: none;
+    /* Oculta la barra lateral en móviles */
 }
 
 @media (min-width: 768px) {
@@ -109,52 +111,168 @@ nav ul li ul li a {
 
 /* Contenedor Principal */
 .container {
+    display: block;
     width: 90%;
     margin: 2rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 10px;
-    border: 2px solid #9982a5;
 }
 
-/* Items */
-.item {
-    flex: 1 1 200px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Métodos */
+/* Responsividad para .method */
 .method {
     display: inline-block;
     width: calc(30% - 2rem);
     margin: 1rem;
     padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .method {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sidebar {
+        display: block;
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        /* Mantenemos un diseño amplio y cómodo */
+        flex-wrap: nowrap;
+        /* Evitamos que los elementos se envuelvan */
+    }
+
+    .sidebar {
+        width: 25%;
+        /* Ajustamos la barra lateral */
+    }
+
+    .main-content {
+        width: 75%;
+        /* El contenido principal tiene mayor prioridad */
+    }
+}
+
+
+
+header {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /*Permitir que los elementos se ajusten a la siguiente fila*/
+    justify-content: space-around;
+    /*espaciado igual entre los elementos*/
+    gap: 20px;
+    /*Espaciado entre los elementos*/
+    padding: 10px;
+    border: 2px #9982a5;
+
+}
+
+.item {
+    flex: 1 1 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.method {
+    display: inline-block;
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    color: inherit;
+    /* Herencia del color */
+    font-family: inherit;
+    /* Herencia de la fuente */
     transition: all 0.3s ease;
 }
 
 .method:hover {
     border-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .method:active {
     background-color: #e6e6e6;
 }
 
-/* Niveles de Dificultad */
 #easy {
     background-color: #90ee90;
 }
@@ -166,6 +284,8 @@ nav ul li ul li a {
 #hard {
     background-color: #c3856b;
     color: black;
+    container-type: center;
+
 }
 
 #variation {
@@ -183,81 +303,69 @@ nav ul li ul li a {
 #ztransform {
     background-color: #9982a5;
     color: rgb(7, 4, 4);
+    align-content: center;
 }
 
-/* Footer */
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    text-align: left;
+}
+
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .sidebar {
+        display: block;
+        width: 25%;
+    }
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     font-size: 0.9em;
+    /* Tamaño de fuente ajustado */
     background-color: #97ffb8;
+    /* Color del fondo */
     color: inherit;
+    /* Hereda el color del texto */
     font-family: 'Lucida Grande', Verdana, sans-serif;
+    /* Asegura una fuente de respaldo */
     border-radius: 5px;
     padding: 1rem;
+    /* Espaciado interno */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra para mejor visualización */
+    max-width: 100%;
+    /* Evita que el footer se desborde */
+    box-sizing: border-box;
+    /* Incluye padding y bordes en el tamaño */
 }
 
 footer p {
     margin: 0;
+    /* Elimina márgenes internos en el texto */
     text-align: center;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .method {
-        width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-
-    nav ul {
-        gap: 20px;
-    }
-
-    .sidebar {
-        width: 30%;
-    }
-
-    .main-content {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        font-size: 20px;
-    }
-
-    .container {
-        flex-wrap: nowrap;
-    }
-
-    .sidebar {
-        width: 25%;
-    }
-
-    .main-content {
-        width: 75%;
-    }
+    /* Centra el texto */
 }
