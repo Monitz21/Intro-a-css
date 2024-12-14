@@ -195,20 +195,6 @@ nav ul li ul li a {
 }
 
 
-footer {
-    box-sizing: border-box;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9em;
-    /* Fuente más pequeña para el pie de página*/
-    background-color: #97ffb8;
-    color: inherit;
-    font-family: 'Lucida Grande', Verdana;
-    border-radius: 5px;
-    padding: 1rem;
-}
-
-
 header {
     background-color: #4682b4;
     color: white;
@@ -319,4 +305,16 @@ ul {
 
 ul li {
     text-align: left;
+}
+footer {
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9em;
+    /* Fuente más pequeña para el pie de página*/
+    background-color: #97ffb8;
+    color: inherit;
+    font-family: 'Lucida Grande', Verdana;
+    border-radius: 5px;
+    padding: 1rem;
 }
