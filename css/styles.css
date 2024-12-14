@@ -39,12 +39,13 @@ footer {
     box-sizing: border-box;
     text-align: center;
     margin-top: 2em;
-    font-size: 0.9em; /* Fuente más pequeña para el pie de página*/
+    font-size: 0.9em;
+    /* Fuente más pequeña para el pie de página*/
     background-color: #7fd690;
     color: inherit;
     font-family: 'Lucida Grande', Verdana;
     border-radius: 5px;
-} 
+}
 
 
 header {
@@ -58,8 +59,17 @@ header {
 .container {
     width: 90%;
     margin: auto;
-    display: block;
-
+    display: flex;
+    flex-direction: row;
+    /*direccion principal horizontal*/
+    justify-content: space-around;
+    /*espaciado igual entre los elementos*/
+    flex-wrap: wrap;
+    /*Permitir que los elementos se ajusten a la siguiente fila*/
+    gap: 20px;
+    /*Espaciado entre los elementos*/
+    padding: 10px;
+    border: 2px;
 }
 
 .method {
