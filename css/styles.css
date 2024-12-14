@@ -28,6 +28,33 @@ h1 {
     text-align: center;
 
 }
+nav{
+    background-color: #90ee90;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a{
+    color: rgb(119, 29, 29);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color: #9982a5;
+}
 
 #important-note {
     font-weight: bold;
@@ -39,13 +66,14 @@ h1 {
 footer {
     box-sizing: border-box;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2rem;
     font-size: 0.9em;
     /* Fuente más pequeña para el pie de página*/
-    background-color: #7fd690;
+    background-color: #97ffb8;
     color: inherit;
     font-family: 'Lucida Grande', Verdana;
     border-radius: 5px;
+    padding: 1rem;
 }
 
 

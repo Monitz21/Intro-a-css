@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a5acd;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+nav{
+    background-color: #90ee90;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a{
+    color: rgb(119, 29, 29);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color: #9982a5;
+}
+.method {
+    flex: 1 1 calc(30% - 2rem);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.method h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.method p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.method a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.method a:hover {
+    opacity: 0.8;
+}
+
+#basic {
+    background-color: #98fb98;
+}
+
+#basic a {
+    background-color: #228b22;
+}
+
+#intermediate {
+    background-color: #ffd700;
+}
+
+#intermediate a {
+    background-color: #ff8c00;
+}
+
+#advanced {
+    background-color: #ff6347;
+    color: white;
+}
+
+#advanced a {
+    background-color: #8b0000;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

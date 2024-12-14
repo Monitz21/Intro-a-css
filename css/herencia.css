@@ -24,6 +24,34 @@ header {
     margin: 2rem auto;
 }
 
+nav{
+    background-color: #90ee90;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a{
+    color: rgb(119, 29, 29);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color: #9982a5;
+}
+
 .method {
     display: inline-block;
     width: calc(30% - 2rem);
@@ -81,4 +109,18 @@ p {
 #ztransform {
     background-color: #9932cc;
     color: white;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
