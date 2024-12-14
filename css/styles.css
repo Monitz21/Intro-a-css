@@ -32,7 +32,7 @@ h1 {
     font-weight: bold;
     /* Más especifico que .highlight*/
     color: #0b627e;
-    font-size: 1;
+    font-size: 120%;
 }
 
 footer {
