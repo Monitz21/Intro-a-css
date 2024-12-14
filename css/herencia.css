@@ -1,3 +1,4 @@
+/* Reset General */
 * {
     box-sizing: border-box;
 }
@@ -8,121 +9,10 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-}
-@media (max-width: 768px) {
-
-    body {
-
-        font-size: 14px;
-        /* Reducir tamaño de fuente en pantallas pequeñas */
-
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    .method {
-        padding: 10px;
-    }
-
-    header nav ul {
-        text-align: center;
-    }
-
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    form {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    form input,
-    form textarea {
-        width: 100%;
-    }
+    line-height: 1.6;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
-
-    body {
-        font-size: 18px;
-        /* Tamaño de fuente un poco mayor, adaptado a pantallas medianas */
-
-    }
-
-    .navbar {
-        flex-direction: row;
-        /* Volvemos la navegación a horizontal */
-        justify-content: space-around;
-
-    }
-
-    .sidebar {
-        display: block;
-        /* Mostramos la barra lateral, pero la mantenemos accesoria */
-
-        width: 30%;
-    }
-
-    .main-content {
-
-        width: 70%;
-        /* Ajustamos el ancho del contenido principal */
-
-    }
-
-    @media (min-width: 1024px) {
-
-        body {
-      
-          font-size: 20px; /* Fuente más grande para legibilidad en pantallas grandes */
-      
-        }
-      
-        .container {
-      
-          display: flex;
-      
-          flex-direction: row; /* Mantenemos un layout amplio y cómodo */
-      
-          flex-wrap: nowrap; /* Evitamos que los elementos se envuelvan */
-      
-        }
-      
-        .sidebar {
-      
-          width: 25%; /* Ajustamos la barra lateral para ocupar un espacio menor */
-      
-        }
-      
-        .main-content {
-      
-          width: 75%; /* El contenido principal tiene la mayor prioridad */
-      
-        }
-      
-      }
-}
-
-.navbar {
-
-    flex-direction: column;
-    /* Organiza la navegación verticalmente */
-
-    align-items: center;
-
-}
-
-.sidebar {
-
-    display: none;
-    /* Oculta la barra lateral en móviles para evitar el desorden */
-
-}
+/* Encabezado */
 header {
     display: block;
     text-align: center;
@@ -131,40 +21,46 @@ header {
     padding: 1rem;
 }
 
-.container {
-    display: block;
-    width: 90%;
-    margin: 2rem auto;
-}
-
-nav{
+/* Navegación */
+nav {
     background-color: #90ee90;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 15px;
-
 }
-nav ul li{
+
+nav ul li {
     display: inline;
 }
-nav ul li a{
+
+nav ul li a {
     color: rgb(119, 29, 29);
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #9982a5;
 }
 
+/* Contenedor General */
+.container {
+    display: block;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Métodos */
 .method {
     display: inline-block;
     width: calc(30% - 2rem);
@@ -173,13 +69,19 @@ nav ul li a:hover{
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #ffffff;
-    vertical-align: top;
     text-align: center;
+    vertical-align: top;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .method img {
-    max-width: 600%;
+    max-width: 100%;
     height: auto;
     margin: 1rem 0;
 }
@@ -194,6 +96,7 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Colores Personalizados */
 #basic {
     background-color: #98fb98;
 }
@@ -223,6 +126,31 @@ p {
     background-color: #9932cc;
     color: white;
 }
+
+/* Barra Lateral */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: block;
+        width: 30%;
+    }
+}
+
+/* Contenido Principal */
+.main-content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        width: 70%;
+    }
+}
+
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -231,9 +159,60 @@ footer {
     color: white;
     padding: 1rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .method {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
