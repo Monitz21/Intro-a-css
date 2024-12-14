@@ -226,12 +226,10 @@ header {
     width: 90%;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    /*direccion principal horizontal*/
-    justify-content: space-around;
-    /*espaciado igual entre los elementos*/
     flex-wrap: wrap;
     /*Permitir que los elementos se ajusten a la siguiente fila*/
+    justify-content: space-around;
+    /*espaciado igual entre los elementos*/
     gap: 20px;
     /*Espaciado entre los elementos*/
     padding: 10px;
