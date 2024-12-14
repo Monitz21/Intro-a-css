@@ -9,8 +9,9 @@
 <body>
     <header>
         <h1>Métodos para Resolver Ecuaciones Diferenciales</h1>
+        <h4> Una introducción a las ecuaciones</h4>
     </header>
-    <div class="container">
+    <section class="container">
         <div id="easy" class="method">
             <h2>Método 1: Variables Separables</h2>
             <p>Función: \( y = f(x) \)</p>
@@ -39,6 +40,45 @@
                 <li>Requiere conocimientos de transformadas.</li>
                 <li>Ideal para sistemas dinámicos.</li>
             </ul>
+        </div>
+        <div id="variation" class="method">
+            <h2>4. Método de Variación de Parámetros</h2>
+            <p>Función: Es un método general que se utiliza para resolver ecuaciones diferenciales no homogéneas.</p>
+            <ul>
+                <li>Permite encontrar soluciones particulares.</li>
+                <li>Útil cuando el método de coeficientes indeterminados no es aplicable.</li>
+                <li>Requiere calcular integrales complicadas.</li>
+            </ul>
+        </div>
+
+        <div id="coefficients" class="method">
+            <h2>5. Método de Coeficientes Indeterminados</h2>
+            <p> Función: Se aplica a ecuaciones lineales con términos no homogéneos específicos.</p>
+            <ul>
+                <li>Fácil de usar para funciones no homogéneas estándar.</li>
+                <li>No es aplicable a todos los casos.</li>
+                <li>Requiere ensayo y error para determinar los coeficientes.</li>
+            </ul>
+        </div>
+
+        <div id="fourier" class="method">
+            <h2>6. Transformada de Fourier</h2>
+            <p>Función: Se utiliza para resolver ecuaciones diferenciales en el dominio de la frecuencia, especialmente para problemas periódicos.</p>
+            <ul>
+                <li>Ideal para señales periódicas y sistemas continuos.</li>
+                <li>Convierte funciones al dominio de la frecuencia.</li>
+                <li>Requiere conocimientos avanzados de análisis matemático.</li>
+            </ul>
+        </div>
+        <div id="ztransform" class="method">
+            <h2>7. Transformada Z</h2>
+            <p>Función: Se utiliza principalmente para sistemas discretos y ecuaciones diferenciales en diferencias.</p>
+            <ul>
+                <li>Convierte ecuaciones en diferencias al dominio Z.</li>
+                <li>Útil para análisis en sistemas digitales.</li>
+                <li>Requiere conocimientos avanzados de procesamiento de señales.</li>
+            </ul>
+        </div>
         </div>
     </div>
 </body>
