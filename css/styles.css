@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -127,6 +129,21 @@ h1 {
 
 }
 
+.navbar {
+
+    flex-direction: column;
+    /* Organiza la navegación verticalmente */
+
+    align-items: center;
+
+}
+
+.sidebar {
+
+    display: none;
+    /* Oculta la barra lateral en móviles para evitar el desorden */
+
+}
 nav {
     background-color: #90ee90;
     padding: 10px 20px;
@@ -167,6 +184,7 @@ nav ul li:hover ul {
 nav ul li ul li a {
     padding: 5px 15px;
 }
+
 
 
 
@@ -308,14 +326,21 @@ ul li {
     text-align: left;
 }
 footer {
-    box-sizing: border-box;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
-    font-size: 0.9em;
-    /* Fuente más pequeña para el pie de página*/
-    background-color: #97ffb8;
-    color: inherit;
-    font-family: 'Lucida Grande', Verdana;
+    font-size: 0.9em; /* Tamaño de fuente ajustado */
+    background-color: #97ffb8; /* Color del fondo */
+    color: inherit; /* Hereda el color del texto */
+    font-family: 'Lucida Grande', Verdana, sans-serif; /* Asegura una fuente de respaldo */
     border-radius: 5px;
-    padding: 1rem;
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para mejor visualización */
+    max-width: 100%; /* Evita que el footer se desborde */
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño */
+}
+footer p {
+    margin: 0; /* Elimina márgenes internos en el texto */
+    text-align: center; /* Centra el texto */
 }
