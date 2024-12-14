@@ -32,8 +32,19 @@ h1 {
     font-weight: bold;
     /* Más especifico que .highlight*/
     color: #0b627e;
+    font-size: 1;
 }
 
+footer {
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 0.9em; /* Fuente más pequeña para el pie de página*/
+    background-color: #7fd690;
+    color: inherit;
+    font-family: 'Lucida Grande', Verdana;
+    border-radius: 5px;
+} 
 
 
 header {
