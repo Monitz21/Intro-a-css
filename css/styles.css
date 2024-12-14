@@ -4,32 +4,51 @@
 
 body {
 
-    font-family: Arial, sans-serif; /* heredada por los hijos*/
-line-height: 1.6; /*Heredado por los hijos*/    
+    font-family: Arial, sans-serif;
+    /* heredada por los hijos*/
+    line-height: 1.6;
+    /*Heredado por los hijos*/
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
 }
-h1{ 
-    color: white; /*sobreescribe el color heredado*/
-p {
-    margin-bottom: 1em;
+
+h1 {
+    color: white;
+
+    /*sobreescribe el color heredado*/
+    p {
+        margin-bottom: 1em;
     }
+}
+
+.highlight {
+    color: rgb(213, 45, 73);
+    /*Mas especifico que body*/
 
 }
+
+#important-note {
+    font-weight: bold;
+    /* Más especifico que .highlight*/
+    color: #0b627e;
+}
+
+
+
 header {
     background-color: #4682b4;
     color: white;
     text-align: center;
     padding: 1rem;
-    
+
 }
 
 .container {
     width: 90%;
     margin: auto;
     display: block;
-    
+
 }
 
 .method {
@@ -40,8 +59,10 @@ header {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
-    color: inherit; /* Herencia del color */
-            font-family: inherit; /* Herencia de la fuente */
+    color: inherit;
+    /* Herencia del color */
+    font-family: inherit;
+    /* Herencia de la fuente */
 }
 
 .method:hover {
@@ -62,11 +83,12 @@ header {
 }
 
 #hard {
-    background-color: #ff4500;
-    color: white;
+    background-color: #c3856b;
+    color: black;
     container-type: center;
-    
+
 }
+
 #variation {
     background-color: #add8e6;
 }
@@ -80,16 +102,17 @@ header {
 }
 
 #ztransform {
-    background-color: #9932cc;
-    color: white;
+    background-color: #9982a5;
+    color: rgb(7, 4, 4);
     align-content: center;
 }
 
 h2 {
     font-size: 1.5rem;
 }
+
 h3 {
-    font-size: 1% ;
+    font-size: 1%;
 }
 
 ul {
